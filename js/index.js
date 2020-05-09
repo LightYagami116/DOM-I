@@ -47,9 +47,6 @@ for(i = 0; i < anchorTags.length; i++){
   anchorTags[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
 }
 
-const midImg = document.getElementById('middle-img');
-midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
-
 const ctaText = document.querySelector(".cta-text h1");
 ctaText.innerHTML = siteContent['cta']['h1'].replace(/\s/g, "</br>");
 const ctaBtn = document.querySelector(".cta-text button");
@@ -59,8 +56,8 @@ const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent.cta["img-src"];
 
 
-const middleImg = document.querySelector("#middle-img");
-middleImg.src = siteContent["main-content"]["middle-img-src"];
+const midImg = document.getElementById('middle-img');
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 const sectionHeaders = document.querySelectorAll(".main-content h4");
 sectionHeaders[0].textContent = siteContent["main-content"]["features-h4"]
